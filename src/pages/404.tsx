@@ -9,7 +9,7 @@ const NotFoundPage = () => {
         Zur Startseite
       </Link>
       <img
-        src="https://github.com/DevChrisRoth/the-reporter/blob/master/static/404.png"
+        src="https://github.com/DevChrisRoth/the-reporter/blob/master/static/404.png?raw=true"
         alt="ErrorLogo"
       />
     </div>

@@ -11,6 +11,7 @@ import { MediumArticle } from "../components/interfaces/ArticleInterface";
 const IndexPage: React.FC<PageProps> = () => {
   const [articles, setArticles] = useState<MediumArticle[]>([]);
   const [newestArticle, setNewestArticle] = useState<MediumArticle>();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -20,6 +21,7 @@ const IndexPage: React.FC<PageProps> = () => {
       .then((data) => {
         setArticles(data.items);
         setNewestArticle(data.items[0]);
+        setLoading(false);
       });
   }, []);
 
@@ -31,22 +33,33 @@ const IndexPage: React.FC<PageProps> = () => {
           <UeberMich />
         </div>
         <MainContent>
-          <NewestBlogEntry newestArticle={newestArticle} />
-          <div className="pt-12">
-            <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
-            <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
-            <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
-          </div>
-          <p className="text-center py-2">Mehr Artikel</p>
-          <MoreMediumArticles articles={articles} />
-          <a
-            href="https://medium.com/@DevChris01"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-center block mt-4 font-normal underline"
-          >
-            Mehr ansehen
-          </a>
+          {loading ? (
+            <div className="flex justify-center flex-col items-center h-64">
+              <img
+                src="https://github.com/DevChrisRoth/the-reporter/blob/master/static/loader.gif?raw=true"
+                alt="LoadingSpinner"
+              />
+            </div>
+          ) : (
+            <div>
+              <NewestBlogEntry newestArticle={newestArticle} />
+              <div className="pt-12">
+                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
+                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
+                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
+              </div>
+              <p className="text-center py-2">Mehr Artikel</p>
+              <MoreMediumArticles articles={articles} />
+              <a
+                href="https://medium.com/@DevChris01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center block mt-4 font-normal underline"
+              >
+                Mehr ansehen
+              </a>
+            </div>
+          )}
         </MainContent>
         <UeberMich />
       </div>
