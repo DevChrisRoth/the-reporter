@@ -2,13 +2,15 @@ import React from "react";
 
 export const UeberMich = () => {
   return (
-    <div className="bg-white px-8 py-6 rounded-lg ml-2 w-64 h-fit">
+    <div className="bg-white px-8 py-6 rounded-lg md:ml-2 w-64 h-fit">
       <h1 className="uppercase text-xl font-bold underline text-left">
         Über mich
       </h1>
       <div className="flex justify-center items-center pt-6 pb-2">
         <img
-          src={"/profile-pic.png"}
+          src={
+            "https://github.com/DevChrisRoth/the-reporter/blob/master/static/profile-pic.png?raw=true"
+          }
           alt="avatar"
           className="rounded-full border border-gray-300"
           width={75}

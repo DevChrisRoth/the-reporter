@@ -1,19 +1,22 @@
 import type { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
+import "../assets/fonts.css";
 import { MainContent } from "../components/MainContent";
 import { Navbar } from "../components/Navbar";
+import { UeberMich } from "../components/UeberMich";
 
 const KolumnPage: React.FC<PageProps> = () => {
   return (
     <main>
       <Navbar />
-      <div className="pt-4 flex justify-center">
+      <div className="pt-2 flex justify-center flex-col md:flex-row mx-8">
+        <div className="invisible">
+          <UeberMich />
+        </div>
         <MainContent>
           <h1>Kolumnen</h1>
         </MainContent>
-        <div className="ml-4">
-          <h2>Über mich</h2>
-        </div>
+        <UeberMich />
       </div>
     </main>
   );

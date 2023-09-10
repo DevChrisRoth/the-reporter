@@ -8,7 +8,10 @@ const NotFoundPage = () => {
       <Link to="/" className="underline">
         Zur Startseite
       </Link>
-      <img src="../404.png" alt="ErrorLogo" />
+      <img
+        src="https://github.com/DevChrisRoth/the-reporter/blob/master/static/404.png"
+        alt="ErrorLogo"
+      />
     </div>
   );
 };
