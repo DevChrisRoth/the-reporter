@@ -3,7 +3,7 @@ import React from "react";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-white h-20 p-2 flex items-center justify-center sticky top-0 border-b">
+    <nav className="bg-white h-20 p-2 flex items-center justify-center sticky top-0 border-b dark:bg-dark-200 dark:border-b-dark-200">
       <div className="max-w-7xl w-full flex justify-between items-center">
         <Link to="/" title="Zurück zur Startseite ">
           <img

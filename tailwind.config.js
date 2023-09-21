@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'media',
   content: [
     `./src/pages/**/*.{js,jsx,ts,tsx}`,
     `./src/components/**/*.{js,jsx,ts,tsx}`,
@@ -9,7 +10,18 @@ module.exports = {
       '7xl': '1920px',
       '790': '790px',
     },
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'dark-100': '#212121',
+        'dark-200': '#303030',
+        'dark-300': '#424242',
+      },
+      borderColor: {
+        'dark-100': '#212121',
+        'dark-200': '#303030',
+        'dark-300': '#424242',
+      },
+    },
   },
   plugins: [],
 }

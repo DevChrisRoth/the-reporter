@@ -2,7 +2,7 @@ import React from "react";
 
 export const UeberMich = () => {
   return (
-    <div className="bg-white px-8 py-6 rounded-lg md:ml-2 w-64 h-fit">
+    <div className="bg-white px-8 py-6 rounded-lg md:ml-2 w-64 h-fit dark:bg-dark-300">
       <h1 className="uppercase text-xl font-bold underline text-left">
         Über mich
       </h1>
