@@ -19,7 +19,7 @@ body, html {
   min-height: 100%;
   font-size: 16px;
   color: #3C4043;
-  @apply dark:bg-dark-100 dark:text-white;
+  @apply dark:bg-dark-100 dark:text-white/75;
 }
 
 p{
@@ -28,7 +28,6 @@ p{
   line-height: 1.5;
   letter-spacing: -0.5px;
   margin-bottom: 1rem;
-  @apply dark:text-slate-100;
 }
 
 h1 {

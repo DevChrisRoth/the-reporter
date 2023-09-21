@@ -44,9 +44,9 @@ const IndexPage: React.FC<PageProps> = () => {
             <div>
               <NewestBlogEntry newestArticle={newestArticle} />
               <div className="pt-12">
-                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
-                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
-                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043]" />
+                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043] dark:border-white/75" />
+                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043] dark:border-white/75" />
+                <hr className="border-t-2 mb-1 border-dotted border-[#3C4043] dark:border-white/75" />
               </div>
               <p className="text-center py-2">Mehr Artikel</p>
               <MoreMediumArticles articles={articles} />
